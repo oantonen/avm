@@ -12,7 +12,7 @@ public:
 
 	IOperand const * operator+( IOperand const & rhs ) const; 
 	IOperand const * operator-( IOperand const & rhs ) const; 
-	IOperand const * operator*( IOperand const & rhs ) const; 
+	IOperand const * operator*( IOperand const & rhs ) const;
 	IOperand const * operator/( IOperand const & rhs ) const; 
 	IOperand const * operator%( IOperand const & rhs ) const; 
 
@@ -21,5 +21,15 @@ public:
 private:
 
 };
+
+	template <class T>
+	IOperand const * Number<T>::operator+(IOperand const & rhs) const
+	{
+		if (rhs.getType() <= this->getType())
+		{
+
+		}
+	}
+
 
 #endif
