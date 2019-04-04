@@ -1,7 +1,7 @@
-#include "templ.hpp"
+#include "Templ.hpp"
 
-
-	IOperand const * Number::operator+(IOperand const & rhs) const
+	template <class T>
+	IOperand const * Number<T>::operator+(IOperand const & rhs) const
 	{
 		if (rhs.getType() <= this->getType())
 		{

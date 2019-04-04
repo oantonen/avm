@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Interface.hpp"
 
-class Creation
+class Create : Number
 {
 public:
 	IOperand const * createOperand( eOperandType type, std::string const & value ) const;
@@ -16,7 +16,7 @@ private:
 	IOperand const * createFloat( std::string const & value ) const;
 	IOperand const * createDouble( std::string const & value ) const;
 
-	IOperand const *(Creation::*func_arr[])(std::string const & value);
+	static IOperand const *(Create::*func_arr[])(std::string const & value) const;
 
 };
 
